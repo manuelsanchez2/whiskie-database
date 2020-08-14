@@ -1,11 +1,8 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
 function App() {
-  return (
-   
-  );
+  return <h2>Hola</h2>;
 }
 
 export default App;
