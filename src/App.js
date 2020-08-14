@@ -17,8 +17,11 @@ function App() {
       <main className="main">
         <List>
           <ListItems>
-            <ListItemImage src={"logoSrc"} alt="Whiskeymaniacs logo" />
-            <ListItemText title={""} description={""}></ListItemText>
+            <ListItemImage src={logoSrc} alt="Whiskeymaniacs logo" />
+            <ListItemText
+              title={"Hola"}
+              description={"GeilerWhisky"}
+            ></ListItemText>
           </ListItems>
         </List>
       </main>
