@@ -1,7 +1,12 @@
 import React from "react";
+import "./ListItems.css";
 
 function ListItems({ href, children }) {
-  return <a href={href}>{children}</a>;
+  return (
+    <a className="listItems" href={href}>
+      {children}
+    </a>
+  );
 }
 
 export default ListItems;
