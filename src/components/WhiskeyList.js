@@ -1,20 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import List from "./List";
 import ListItems from "./ListItems";
 import ListItemImage from "./ListItemImage";
 import ListItemText from "./ListItemText";
-import logoSrc from "../assets/logo.png";
+import fetchWhiskeys from "../api/fetchWhiskeys";
 
 function WhiskeyList({ children }) {
+  const [whiskeys, setWhiskeys] = useState(null);
+
+  useEffect(() => {
+    async function showWhiskeys() {
+      const newWhiskeys = await fetchWhiskeys();
+      setWhiskeys(newWhiskeys);
+    }
+    showWhiskeys();
+  }, []);
+
   return (
     <List>
-      <ListItems>
-        <ListItemImage src={logoSrc} alt="Whiskeymaniacs logo" />
-        <ListItemText
-          title={"Hola"}
-          description={"GeilerWhisky"}
-        ></ListItemText>
-      </ListItems>
+      {whiskeys?.map((whiskey) => (
+        <ListItems key={whiskey.id}>
+          <ListItemImage
+            src={whiskey.img_url}
+            alt={`Picture of ${whiskey.title}`}
+          />
+          <ListItemText
+            title={whiskey.title}
+            description={whiskey.description}
+          />
+        </ListItems>
+      ))}
     </List>
   );
 }
