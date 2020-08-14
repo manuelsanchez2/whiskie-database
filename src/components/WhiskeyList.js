@@ -11,6 +11,7 @@ function WhiskeyList({ children }) {
   useEffect(() => {
     async function showWhiskeys() {
       const newWhiskeys = await fetchWhiskeys();
+
       setWhiskeys(newWhiskeys);
     }
     showWhiskeys();
