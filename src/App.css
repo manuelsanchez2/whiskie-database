@@ -2,4 +2,26 @@
   text-align: center;
   width: 100vw;
   height: 100vh;
+  display: grid;
+}
+
+.header {
+  display: grid;
+  place-items: center;
+  font-size: 0.6em;
+}
+
+.input {
+  border: none;
+  border-radius: 5px;
+}
+
+.app__logo {
+  width: 5em;
+  height: 5em;
+  object-fit: contain;
+}
+
+.main {
+  background: rgba(0, 0, 0, 0.5);
 }
