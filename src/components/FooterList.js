@@ -13,7 +13,7 @@ function FooterList({ children, href, src, alt }) {
       <span className="footer__text">Your Whiskeys</span>
       <a className="footer__icon" href={href}>
         <img src={WishList} alt="Wish List" />
-        <span className="footer__icon__badge"></span>
+        <span className="footer__icon__badge">3</span>
       </a>
       <span className="footer__text">Wish List</span>
       <a className="footer__icon" href={href}>

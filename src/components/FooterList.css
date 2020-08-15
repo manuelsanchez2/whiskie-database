@@ -9,12 +9,29 @@
 .footer__icon {
   position: relative;
   grid-row: 1 / 2;
-  width: 25px;
-  height: 25px;
+  width: 1.8em;
+  height: 1.8em;
+  opacity: 0.5;
+}
+
+.footer__icon:hover {
+  opacity: 1;
+  background: #794a08;
+  border-radius: 50%;
 }
 
 .footer__icon__badge {
   position: absolute;
+  top: -6px;
+  right: -3px;
+  background: black;
+  color: white;
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+  line-height: 1rem;
+  font-size: 0.77rem;
+  text-align: center;
 }
 
 .footer__text {
