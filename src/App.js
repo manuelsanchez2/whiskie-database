@@ -12,7 +12,7 @@ function App() {
         <img className="app__logo" src={logoSrc} alt="whiskeymaniacs" />
         <input className="input" placeholder="Get your whisky..." />
       </header>
-      <main className="main">
+      <main className="app__borders">
         <WhiskeyList />
       </main>
       <footer></footer>
