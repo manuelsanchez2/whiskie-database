@@ -1,0 +1,18 @@
+.loadingScreen {
+  height: 100vh;
+  background: var(--bg-gradient);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.loadingScreen__icon {
+  width: 12em;
+  height: 12em;
+  object-fit: contain;
+}
+
+.loadingScreen__text {
+  font-size: 4em;
+  font-style: italic;
+}
