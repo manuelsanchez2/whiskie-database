@@ -2,7 +2,6 @@
   display: grid;
   align-items: center;
   justify-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   margin: auto;
 }
@@ -10,6 +9,8 @@
 .footer__icon {
   position: relative;
   grid-row: 1 / 2;
+  width: 25px;
+  height: 25px;
 }
 
 .footer__icon__badge {
