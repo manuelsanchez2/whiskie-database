@@ -1,0 +1,24 @@
+.footer {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin: auto;
+}
+
+.footer__icon {
+  position: relative;
+  grid-row: 1 / 2;
+}
+
+.footer__icon__badge {
+  position: absolute;
+}
+
+.footer__text {
+  grid-row: 2 / 3;
+  font-size: 10px;
+  font-family: "Bebas Neue", cursive;
+  text-align: center;
+}

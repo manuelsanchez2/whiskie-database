@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import logoSrc from "./assets/logo.png";
 import WhiskeyList from "./components/WhiskeyList";
+import FooterList from "./components/FooterList";
 // import { fetchWhiskeys } from "./api/Whiskeys";
 
 function App() {
@@ -15,7 +16,9 @@ function App() {
       <main className="app__borders">
         <WhiskeyList />
       </main>
-      <footer></footer>
+      <footer>
+        <FooterList></FooterList>
+      </footer>
     </div>
   );
 }
