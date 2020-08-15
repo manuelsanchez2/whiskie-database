@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import logoSrc from "./assets/logo.png";
 import WhiskeyList from "./components/WhiskeyList";
+import FooterList from "./components/FooterList";
 // import { fetchWhiskeys } from "./api/Whiskeys";
 
 function App() {
@@ -12,10 +13,12 @@ function App() {
         <img className="app__logo" src={logoSrc} alt="whiskeymaniacs" />
         <input className="input" placeholder="Get your whisky..." />
       </header>
-      <main className="main">
+      <main className="app__borders">
         <WhiskeyList />
       </main>
-      <footer></footer>
+      <footer>
+        <FooterList></FooterList>
+      </footer>
     </div>
   );
 }

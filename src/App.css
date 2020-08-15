@@ -9,11 +9,14 @@
   display: grid;
   place-items: center;
   font-size: 0.6em;
+  background: var(--bg-gradient);
 }
 
 .input {
   border: none;
   border-radius: 5px;
+  margin: 5px 0;
+  font-family: "Bebas Neue", cursive;
 }
 
 .app__logo {
@@ -22,7 +25,19 @@
   object-fit: contain;
 }
 
-.main {
+main {
   background: rgba(255, 255, 255, 0.6);
   overflow: auto;
+}
+
+.app__borders {
+  border-style: solid;
+  border-image-slice: 1;
+  border-width: 5px 0;
+  border-image-source: var(--bg-borders);
+}
+
+footer {
+  padding: 14px 0 2px 0;
+  background: var(--bg-gradient);
 }
