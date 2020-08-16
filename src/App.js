@@ -3,7 +3,6 @@ import "./App.css";
 import WhiskeyList from "./components/WhiskeyList";
 import FooterList from "./components/FooterList";
 import HeaderList from "./components/HeaderList";
-// import { fetchWhiskeys } from "./api/Whiskeys";
 
 function App() {
   return (

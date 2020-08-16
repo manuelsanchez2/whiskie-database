@@ -6,6 +6,7 @@ import ListItemText from "./ListItemText";
 import fetchWhiskeys from "../api/fetchWhiskeys";
 import LoadingScreen from "./LoadingScreen";
 import ExpandableInfo from "./ExpandableInfo";
+import "./WhiskeyList.css";
 
 function WhiskeyList({ children }) {
   const [isLoading, setIsLoading] = useState(false);

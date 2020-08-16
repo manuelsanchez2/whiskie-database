@@ -4,13 +4,15 @@
   justify-items: center;
   grid-template-rows: 1fr 1fr;
   margin: auto;
+  padding: 14px 0 2px 0;
+  background: var(--bg-gradient);
 }
 
 .footer__icon {
   position: relative;
   grid-row: 1 / 2;
-  width: 1.8em;
-  height: 1.8em;
+  width: 1.7em;
+  height: 1.7em;
   opacity: 0.5;
 }
 
@@ -36,7 +38,7 @@
 
 .footer__text {
   grid-row: 2 / 3;
-  font-size: 10px;
+  font-size: 0.8em;
   font-family: "Bebas Neue", cursive;
   text-align: center;
 }

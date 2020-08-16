@@ -2,7 +2,7 @@ import React from "react";
 
 function ExpandableInfo({ title, region, price, rating }) {
   return (
-    <div>
+    <div className="expandableInfo">
       <h3>What to know about {title}</h3>
       <p>
         This whiskey has an average price of {price} and a rating of {rating}.{" "}

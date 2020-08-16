@@ -19,6 +19,7 @@ export default async function fetchWhiskeys() {
     title: whiskey.title,
     description: whiskey.description,
     id: whiskey.id,
+    img_url: whiskey.img_url,
     price: whiskey.price,
     rating: whiskey.rating,
     region: whiskey.region,
