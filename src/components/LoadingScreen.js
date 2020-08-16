@@ -1,5 +1,5 @@
 import React from "react";
-import logoSrc from "../assets/logo.png";
+import loadingSrc from "../assets/loadingScreen.gif";
 import "./LoadingScreen.css";
 
 function LoadingScreen({ src, alt }) {
@@ -7,7 +7,7 @@ function LoadingScreen({ src, alt }) {
     <div className="loadingScreen">
       <img
         className="loadingScreen__icon"
-        src={logoSrc}
+        src={loadingSrc}
         alt="Whiskeymaniacs logo"
       />
       <span className="loadingScreen__text">Loading...</span>
