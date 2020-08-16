@@ -5,24 +5,8 @@
   grid-template-rows: auto 1fr auto;
 }
 
-.header {
-  display: grid;
-  place-items: center;
-  font-size: 0.6em;
+header {
   background: var(--bg-gradient);
-}
-
-.input {
-  border: none;
-  border-radius: 5px;
-  margin: 5px 0;
-  font-family: "Bebas Neue", cursive;
-}
-
-.app__logo {
-  width: 5em;
-  height: 5em;
-  object-fit: contain;
 }
 
 main {
@@ -35,9 +19,4 @@ main {
   border-image-slice: 1;
   border-width: 5px 0;
   border-image-source: var(--bg-borders);
-}
-
-footer {
-  padding: 14px 0 2px 0;
-  background: var(--bg-gradient);
 }

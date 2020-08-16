@@ -5,10 +5,17 @@ import ListItemImage from "./ListItemImage";
 import ListItemText from "./ListItemText";
 import fetchWhiskeys from "../api/fetchWhiskeys";
 import LoadingScreen from "./LoadingScreen";
+import ExpandableInfo from "./ExpandableInfo";
+import "./WhiskeyList.css";
 
 function WhiskeyList({ children }) {
   const [isLoading, setIsLoading] = useState(false);
   const [whiskeys, setWhiskeys] = useState(null);
+  const [open, setOpen] = React.useState(false);
+
+  const showInfo = () => {
+    setOpen(!open);
+  };
 
   function waitFor(time) {
     return new Promise((resolve) => setTimeout(resolve, time));
@@ -24,9 +31,9 @@ function WhiskeyList({ children }) {
     showWhiskeys();
   }, []);
 
-  if (isLoading || whiskeys === null) {
-    return <LoadingScreen />;
-  }
+  // if (isLoading || whiskeys === null) {
+  //   return <LoadingScreen />;
+  // }
 
   return (
     <List>
@@ -40,6 +47,10 @@ function WhiskeyList({ children }) {
             title={whiskey.title}
             description={whiskey.description}
           />
+          <button className="infoButton" onClick={showInfo}>
+            More info
+          </button>
+          {open && <ExpandableInfo />}
         </ListItems>
       ))}
     </List>

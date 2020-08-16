@@ -1,5 +1,7 @@
 .listItems {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   border-bottom: 1px solid black;
 }

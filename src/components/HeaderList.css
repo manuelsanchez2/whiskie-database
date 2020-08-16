@@ -1,0 +1,23 @@
+.headerList {
+  display: grid;
+  place-items: center;
+  font-size: 0.6em;
+}
+
+.headerList__title {
+  font-size: 3em;
+  margin: 10px 0 0 0;
+}
+
+.headerList__logo {
+  width: 5em;
+  height: 5em;
+  object-fit: contain;
+}
+.headerList__input {
+  border: none;
+  border-radius: 5px;
+  margin: 5px 0;
+  font-family: "Bebas Neue", cursive;
+  width: 70vw;
+}
