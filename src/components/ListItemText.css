@@ -1,6 +1,6 @@
 .listItemText {
   padding-left: 5px;
-  /* flex-grow: 1; */
+  flex-grow: 1;
 }
 
 .listItemText > :first-child {
