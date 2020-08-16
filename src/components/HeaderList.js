@@ -2,7 +2,7 @@ import React from "react";
 import logoSrc from "../assets/logo.png";
 import "./HeaderList.css";
 
-function HeaderList(props) {
+function HeaderList({ children, src, value }) {
   return (
     <div className="headerList">
       <h1 className="headerList__title">WHISKEYMANIACS</h1>

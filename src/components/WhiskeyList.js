@@ -31,16 +31,16 @@ function WhiskeyList({ children }) {
     showWhiskeys();
   }, []);
 
-  // if (isLoading || whiskeys === null) {
-  //   return <LoadingScreen />;
-  // }
+  if (isLoading || whiskeys === null) {
+    return <LoadingScreen />;
+  }
 
   return (
     <List>
       {whiskeys?.map((whiskey) => (
         <ListItems key={whiskey.id}>
           <ListItemImage
-            src={whiskey.img_url}
+            src={"whiskey.img_url"}
             alt={`Picture of ${whiskey.title}`}
           />
           <ListItemText
