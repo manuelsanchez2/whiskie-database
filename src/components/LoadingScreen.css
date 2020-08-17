@@ -10,11 +10,13 @@
 
 .loadingScreen__icon {
   border-radius: 50%;
-  max-width: 11em;
-  max-height: 11em;
+  max-width: 18em;
+  max-height: 18em;
+  transform: translateY(-100px);
 }
 
 .loadingScreen__text {
   font-size: 3em;
   font-style: italic;
+  transform: translateY(-50px);
 }
