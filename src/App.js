@@ -5,16 +5,21 @@ import FooterList from "./components/FooterList";
 import HeaderList from "./components/HeaderList";
 
 function App() {
+  const [query, setQuery] = React.useState("");
+
   return (
     <div className="app">
       <header className="header">
-        <HeaderList></HeaderList>
+        <HeaderList
+          whiskyQuery={query}
+          onWhiskyQueryChange={(whiskyQuery) => setQuery(whiskyQuery)}
+        />
       </header>
       <main className="app__borders">
-        <WhiskeyList />
+        <WhiskeyList query={query} />
       </main>
       <footer>
-        <FooterList></FooterList>
+        <FooterList />
       </footer>
     </div>
   );

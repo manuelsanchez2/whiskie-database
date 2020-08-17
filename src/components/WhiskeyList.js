@@ -7,8 +7,9 @@ import fetchWhiskeys from "../api/fetchWhiskeys";
 import LoadingScreen from "./LoadingScreen";
 import ExpandableInfo from "./ExpandableInfo";
 import "./WhiskeyList.css";
+import whiskeySrc from "../assets/whiskey.svg";
 
-function WhiskeyList({ children }) {
+function WhiskeyList({ search }) {
   const [isLoading, setIsLoading] = useState(false);
   const [whiskeys, setWhiskeys] = useState(null);
   const [open, setOpen] = React.useState(false);
@@ -17,19 +18,18 @@ function WhiskeyList({ children }) {
     setOpen(!open);
   };
 
-  function waitFor(time) {
-    return new Promise((resolve) => setTimeout(resolve, time));
-  }
+  // function waitFor(time) {
+  //   return new Promise((resolve) => setTimeout(resolve, time));
+  // }
 
   useEffect(() => {
     async function showWhiskeys() {
-      const newWhiskeys = await fetchWhiskeys();
-      await waitFor(2000);
+      const newWhiskeys = await fetchWhiskeys(search);
       setWhiskeys(newWhiskeys);
       setIsLoading(false);
     }
     showWhiskeys();
-  }, []);
+  }, [search]);
 
   if (isLoading || whiskeys === null) {
     return <LoadingScreen />;
@@ -39,10 +39,7 @@ function WhiskeyList({ children }) {
     <List>
       {whiskeys?.map((whiskey) => (
         <ListItems key={whiskey.id}>
-          <ListItemImage
-            src={"whiskey.img_url"}
-            alt={`Picture of ${whiskey.title}`}
-          />
+          <ListItemImage src={whiskeySrc} alt={`Picture of ${whiskey.title}`} />
           <ListItemText
             title={whiskey.title}
             description={whiskey.description}
