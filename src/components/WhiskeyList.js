@@ -50,7 +50,14 @@ function WhiskeyList({ children }) {
           <button className="infoButton" onClick={showInfo}>
             More info
           </button>
-          {open && <ExpandableInfo />}
+          {open && (
+            <ExpandableInfo
+              title={whiskey.title}
+              price={whiskey.price}
+              rating={whiskey.rating}
+              region={whiskey.region}
+            />
+          )}
         </ListItems>
       ))}
     </List>
