@@ -9,7 +9,7 @@ import ExpandableInfo from "./ExpandableInfo";
 import "./WhiskeyList.css";
 import whiskeySrc from "../assets/whiskey.svg";
 
-function WhiskeyList({ search }) {
+function WhiskeyList({ query }) {
   const [isLoading, setIsLoading] = useState(false);
   const [whiskeys, setWhiskeys] = useState(null);
   const [open, setOpen] = React.useState(false);
@@ -24,12 +24,12 @@ function WhiskeyList({ search }) {
 
   useEffect(() => {
     async function showWhiskeys() {
-      const newWhiskeys = await fetchWhiskeys(search);
+      const newWhiskeys = await fetchWhiskeys(query);
       setWhiskeys(newWhiskeys);
       setIsLoading(false);
     }
     showWhiskeys();
-  }, [search]);
+  }, [query]);
 
   if (isLoading || whiskeys === null) {
     return <LoadingScreen />;
