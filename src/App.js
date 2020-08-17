@@ -11,7 +11,7 @@ function App() {
         <HeaderList></HeaderList>
       </header>
       <main className="app__borders">
-        <WhiskeyList />
+        <WhiskeyList search={"Ab"} />
       </main>
       <footer>
         <FooterList></FooterList>

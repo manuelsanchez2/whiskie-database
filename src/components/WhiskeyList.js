@@ -8,7 +8,7 @@ import LoadingScreen from "./LoadingScreen";
 import ExpandableInfo from "./ExpandableInfo";
 import "./WhiskeyList.css";
 
-function WhiskeyList({ children }) {
+function WhiskeyList({ search }) {
   const [isLoading, setIsLoading] = useState(false);
   const [whiskeys, setWhiskeys] = useState(null);
   const [open, setOpen] = React.useState(false);
@@ -23,7 +23,7 @@ function WhiskeyList({ children }) {
 
   useEffect(() => {
     async function showWhiskeys() {
-      const newWhiskeys = await fetchWhiskeys();
+      const newWhiskeys = await fetchWhiskeys(search);
       await waitFor(2000);
       setWhiskeys(newWhiskeys);
       setIsLoading(false);
