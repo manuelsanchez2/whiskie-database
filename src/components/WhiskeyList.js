@@ -7,6 +7,7 @@ import fetchWhiskeys from "../api/fetchWhiskeys";
 import LoadingScreen from "./LoadingScreen";
 import ExpandableInfo from "./ExpandableInfo";
 import "./WhiskeyList.css";
+import whiskeySrc from "../assets/whiskey.svg";
 
 function WhiskeyList({ search }) {
   const [isLoading, setIsLoading] = useState(false);
@@ -17,19 +18,18 @@ function WhiskeyList({ search }) {
     setOpen(!open);
   };
 
-  function waitFor(time) {
-    return new Promise((resolve) => setTimeout(resolve, time));
-  }
+  // function waitFor(time) {
+  //   return new Promise((resolve) => setTimeout(resolve, time));
+  // }
 
   useEffect(() => {
     async function showWhiskeys() {
       const newWhiskeys = await fetchWhiskeys(search);
-      await waitFor(2000);
       setWhiskeys(newWhiskeys);
       setIsLoading(false);
     }
     showWhiskeys();
-  }, []);
+  }, [search]);
 
   if (isLoading || whiskeys === null) {
     return <LoadingScreen />;
@@ -39,10 +39,7 @@ function WhiskeyList({ search }) {
     <List>
       {whiskeys?.map((whiskey) => (
         <ListItems key={whiskey.id}>
-          <ListItemImage
-            src={"whiskey.img_url"}
-            alt={`Picture of ${whiskey.title}`}
-          />
+          <ListItemImage src={whiskeySrc} alt={`Picture of ${whiskey.title}`} />
           <ListItemText
             title={whiskey.title}
             description={whiskey.description}
