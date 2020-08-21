@@ -7,20 +7,22 @@ import {
   Redirect,
 } from "react-router-dom";
 import Home from "./pages/Home";
+import WishList from "./pages/WishList";
+import Camera from "./pages/Camera";
 
 function App() {
   return (
     <div className="app">
       <Router>
         <Switch>
-          <Route>
+          <Route path="/home">
             <Home />
           </Route>
-          <Route path="wish-list">
-            <h2>THIS IS YOUR WISH LIST</h2>
+          <Route path="/wish-list">
+            <WishList />
           </Route>
-          <Route path="camera">
-            <h2>THIS IS YOUR CAMERA PAGE</h2>
+          <Route path="/camera">
+            <Camera />
           </Route>
           <Route path="/">
             <Redirect to="home" />
