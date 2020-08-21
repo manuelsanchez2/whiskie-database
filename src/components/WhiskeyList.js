@@ -36,7 +36,7 @@ function WhiskeyList({ query }) {
   }
 
   return (
-    <List>
+    <List className="list">
       {whiskeys?.map((whiskey) => (
         <ListItems key={whiskey.id}>
           <ListItemImage src={whiskeySrc} alt={`Picture of ${whiskey.title}`} />

@@ -9,18 +9,18 @@ function Home(props) {
   const [query, setQuery] = React.useState("");
 
   return (
-    <div>
+    <>
       <StyledHeader>
         <HeaderList
           whiskyQuery={query}
           onWhiskyQueryChange={(whiskyQuery) => setQuery(whiskyQuery)}
         />
       </StyledHeader>
-      <main className="app__borders">
+      <main>
         <WhiskeyList query={query} />
       </main>
       <StyledFooter />
-    </div>
+    </>
   );
 }
 
