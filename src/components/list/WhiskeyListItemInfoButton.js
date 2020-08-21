@@ -7,6 +7,7 @@ const InfoButton = styled.button`
   background: #794a08;
   color: white;
   justify-self: right;
+  flex-grow: 0;
 `;
 
 function WhiskeyListItemInfoButton({ children, onClick }) {
