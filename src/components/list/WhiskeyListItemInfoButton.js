@@ -9,8 +9,8 @@ const InfoButton = styled.button`
   justify-self: right;
 `;
 
-function WhiskeyListItemInfoButton({ children }) {
-  return <InfoButton>{children}</InfoButton>;
+function WhiskeyListItemInfoButton({ children, onClick }) {
+  return <InfoButton onClick={onClick}>{children}</InfoButton>;
 }
 
 export default WhiskeyListItemInfoButton;

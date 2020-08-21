@@ -23,9 +23,10 @@ function WhiskeyList({ query }) {
   const [whiskeys, setWhiskeys] = useState(null);
   const [open, setOpen] = React.useState(false);
 
-  const showInfo = () => {
+  function handleWhiskieListItemInfoButtonClick() {
     setOpen(!open);
-  };
+    console.log(open);
+  }
 
   useEffect(() => {
     async function showWhiskeys() {
@@ -52,7 +53,9 @@ function WhiskeyList({ query }) {
             title={whiskey.title}
             description={whiskey.description}
           />
-          <WhiskeyListItemInfoButton onClick={showInfo}>
+          <WhiskeyListItemInfoButton
+            onClick={() => handleWhiskieListItemInfoButtonClick()}
+          >
             More info
           </WhiskeyListItemInfoButton>
           {open && (

@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 
 const ListItems = styled.nav`
   display: flex;
+  flex: row wrap;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid black;
