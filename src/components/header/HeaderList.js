@@ -1,11 +1,12 @@
 import React from "react";
-import logoSrc from "../assets/logo.png";
+import logoSrc from "../../assets/logo.png";
 import "./HeaderList.css";
+import HeaderTitle from "./HeaderTitle";
 
 function HeaderList({ whiskyQuery, onWhiskyQueryChange }) {
   return (
     <div className="headerList">
-      <h1 className="headerList__title">WHISKEYMANIACS</h1>
+      <HeaderTitle>WHISKEYMANIACS</HeaderTitle>
       <img className="headerList__logo" src={logoSrc} alt="whiskeymaniacs" />
       <input
         value={whiskyQuery}
@@ -20,7 +21,3 @@ function HeaderList({ whiskyQuery, onWhiskyQueryChange }) {
 }
 
 export default HeaderList;
-
-//   const filteredWhiskeys = fetchWhiskeys.filter((fetchWhiskeys) => {
-//     return fetchWhiskeys.title.toLowerCase().startsWith(query.toLowerCase);
-//   });

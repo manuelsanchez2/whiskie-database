@@ -1,16 +1,21 @@
 import React from "react";
 import StyledHeader from "../components/StyledHeader";
+import StyledFooter from "../components/StyledFooter";
+import HeaderTitle from "../components/header/HeaderTitle";
+import HeaderImage from "../components/header/HeaderImage";
 
 function WishList(props) {
   return (
-    <div>
+    <>
       <StyledHeader>
-        <h2>STARRED WHISKIES</h2>
+        <HeaderTitle>STARRED WHISKIES</HeaderTitle>
+        <HeaderImage />
       </StyledHeader>
       <main>
-        <p>Here you have your wines</p>
+        <p>Here you have your whiskies</p>
       </main>
-    </div>
+      <StyledFooter />
+    </>
   );
 }
 

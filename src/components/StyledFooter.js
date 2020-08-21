@@ -37,7 +37,7 @@ function StyledFooter({ children, href, src, alt }) {
     <Footer>
       <Link to="/home">
         <img src={Whiskey} alt="Your Whiskeys" />
-        <span>Your Whiskeys</span>
+        <span>Whiskeys</span>
       </Link>
       <Link to="/wish-list">
         <img src={WishList} alt="Wish List" />
