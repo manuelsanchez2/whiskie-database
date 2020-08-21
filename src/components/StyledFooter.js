@@ -3,25 +3,34 @@ import Whiskey from "../assets/whiskey.svg";
 import WishList from "../assets/list.svg";
 import Camera from "../assets/camera.svg";
 import "./FooterList.css";
+import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 
-function FooterList({ children, href, src, alt }) {
+const Footer = styled.footer`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--bg-gradient);
+`;
+
+function StyledFooter({ children, href, src, alt }) {
   return (
-    <div className="footer">
-      <a className="footer__icon" href={href}>
+    <Footer>
+      <Link className="footer__icon" to="/home">
         <img src={Whiskey} alt="Your Whiskeys" />
-      </a>
+      </Link>
       <span className="footer__text">Your Whiskeys</span>
-      <a className="footer__icon" href={href}>
+      <Link className="footer__icon" to="/wish-list">
         <img src={WishList} alt="Wish List" />
         <span className="footer__icon__badge">3</span>
-      </a>
+      </Link>
       <span className="footer__text">Wish List</span>
-      <a className="footer__icon" href={href}>
+      <Link className="footer__icon" to="/camera">
         <img src={Camera} alt="Camera" />
-      </a>
+      </Link>
       <span className="footer__text">Scan</span>
-    </div>
+    </Footer>
   );
 }
 
-export default FooterList;
+export default StyledFooter;

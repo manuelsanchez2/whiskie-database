@@ -1,6 +1,6 @@
 import React from "react";
 import WhiskeyList from "../components/WhiskeyList";
-import FooterList from "../components/FooterList";
+import FooterList from "../components/StyledFooter";
 import HeaderList from "../components/HeaderList";
 import StyledHeader from "../components/StyledHeader";
 
