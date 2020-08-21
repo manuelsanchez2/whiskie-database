@@ -1,9 +1,15 @@
 import React from "react";
+import StyledHeader from "../components/StyledHeader";
 
 function Camera(props) {
   return (
     <div>
-      <h2>Camera functions in progress...</h2>
+      <StyledHeader>
+        <h2>PICTURE YOUR WHISKIE</h2>
+      </StyledHeader>
+      <main>
+        <p>Camera functions in progress...</p>
+      </main>
     </div>
   );
 }
