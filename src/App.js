@@ -1,35 +1,20 @@
 import React from "react";
 import "./App.css";
-import WhiskeyList from "./components/WhiskeyList";
-import FooterList from "./components/FooterList";
-import HeaderList from "./components/HeaderList";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
 } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
-  const [query, setQuery] = React.useState("");
-
   return (
     <div className="app">
       <Router>
         <Switch>
           <Route>
-            <header className="header">
-              <HeaderList
-                whiskyQuery={query}
-                onWhiskyQueryChange={(whiskyQuery) => setQuery(whiskyQuery)}
-              />
-            </header>
-            <main className="app__borders">
-              <WhiskeyList query={query} />
-            </main>
-            <footer>
-              <FooterList />
-            </footer>
+            <Home />
           </Route>
           <Route path="wish-list">
             <h2>THIS IS YOUR WISH LIST</h2>
