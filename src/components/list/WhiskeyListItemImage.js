@@ -2,7 +2,6 @@ import React from "react";
 import styled from "@emotion/styled";
 
 const ListItemImage = styled.img`
-  display: flex;
   padding-left: 10px;
   object-fit: contain;
   max-width: 40px;

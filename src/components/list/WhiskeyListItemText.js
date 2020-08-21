@@ -3,7 +3,8 @@ import styled from "@emotion/styled";
 
 const ListItemText = styled.div`
   padding-left: 5px;
-  flex-grow: 2;
+  flex-basis: 100%;
+  flex-grow: 1;
 
   :first-child {
     margin: 0;
@@ -11,13 +12,12 @@ const ListItemText = styled.div`
   :last-child {
     font-size: 0.4em;
     margin: 0;
-    flex-wrap: wrap;
   }
 `;
 
 function WhiskeyListItemText({ title, description }) {
   return (
-    <ListItemText className="listItemText">
+    <ListItemText>
       <h3>{title}</h3>
       <p>{description}</p>
     </ListItemText>

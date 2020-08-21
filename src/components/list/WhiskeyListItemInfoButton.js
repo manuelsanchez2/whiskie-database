@@ -7,10 +7,11 @@ const InfoButton = styled.button`
   background: #794a08;
   color: white;
   justify-self: right;
+  flex-grow: 0;
 `;
 
-function WhiskeyListItemInfoButton({ children }) {
-  return <InfoButton>{children}</InfoButton>;
+function WhiskeyListItemInfoButton({ children, onClick }) {
+  return <InfoButton onClick={onClick}>{children}</InfoButton>;
 }
 
 export default WhiskeyListItemInfoButton;
