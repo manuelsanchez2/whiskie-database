@@ -1,5 +1,5 @@
 import React from "react";
-import loadingSrc from "../assets/loadingScreen.gif";
+import loadingSrc from "../../assets/loadingScreen.gif";
 import "./LoadingScreen.css";
 
 function LoadingScreen({ src, alt }) {

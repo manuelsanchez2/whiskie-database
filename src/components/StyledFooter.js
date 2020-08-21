@@ -13,13 +13,27 @@ const Footer = styled.nav`
   border-radius: 0 20px 5px 5px;
   background: var(--bg-gradient);
 
-  span {
+  img:hover {
+    opacity: 1;
+    background: #794a08;
+    border-radius: 50%;
+  }
+
+  a:visited {
+    opacity: 1;
+    background: #794a08;
+    border-radius: 50%;
+  }
+
+  a span {
     color: black;
+    opacity: 0.7;
   }
 
   img {
     width: 1.7em;
     height: 1.7em;
+    opacity: 0.5;
   }
 
   a {

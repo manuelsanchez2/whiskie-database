@@ -1,13 +1,20 @@
 import React, { useState, useEffect } from "react";
-import List from "./List";
-import ListItems from "./ListItems";
-import ListItemImage from "./ListItemImage";
-import ListItemText from "./ListItemText";
+import ListItems from "./list/ListItems";
+import ListItemImage from "./list/ListItemImage";
+import ListItemText from "./list/WhiskeyListItemText";
 import fetchWhiskeys from "../api/fetchWhiskeys";
-import LoadingScreen from "./LoadingScreen";
-import ExpandableInfo from "./ExpandableInfo";
+import LoadingScreen from "./list/LoadingScreen";
+import ExpandableInfo from "./list/ExpandableInfo";
 import "./WhiskeyList.css";
 import whiskeySrc from "../assets/whiskey.svg";
+import styled from "@emotion/styled";
+
+const List = styled.nav`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`;
 
 function WhiskeyList({ query }) {
   const [isLoading, setIsLoading] = useState(false);
@@ -36,7 +43,7 @@ function WhiskeyList({ query }) {
   }
 
   return (
-    <List className="list">
+    <List>
       {whiskeys?.map((whiskey) => (
         <ListItems key={whiskey.id}>
           <ListItemImage src={whiskeySrc} alt={`Picture of ${whiskey.title}`} />

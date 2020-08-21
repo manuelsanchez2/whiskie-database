@@ -22,7 +22,6 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: soft-light;
-
   grid-row: 2 / 3;
   overflow-y: scroll;
 }
