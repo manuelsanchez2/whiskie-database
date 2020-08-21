@@ -2,33 +2,52 @@ import React from "react";
 import Whiskey from "../assets/whiskey.svg";
 import WishList from "../assets/list.svg";
 import Camera from "../assets/camera.svg";
-import "./FooterList.css";
+// import "./FooterList.css";
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 
-const Footer = styled.footer`
-  display: grid;
-  place-items: center;
+const Footer = styled.nav`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   border-radius: 0 20px 5px 5px;
   background: var(--bg-gradient);
+
+  span {
+    color: black;
+  }
+
+  img {
+    width: 1.7em;
+    height: 1.7em;
+  }
+
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    text-decoration: none;
+  }
 `;
 
 function StyledFooter({ children, href, src, alt }) {
   return (
     <Footer>
-      <Link className="footer__icon" to="/home">
+      <Link to="/home">
         <img src={Whiskey} alt="Your Whiskeys" />
+        <span>Your Whiskeys</span>
       </Link>
-      <span className="footer__text">Your Whiskeys</span>
-      <Link className="footer__icon" to="/wish-list">
+      <Link to="/wish-list">
         <img src={WishList} alt="Wish List" />
-        <span className="footer__icon__badge">3</span>
+        {/* <span className="footer__icon__badge">3</span> */}
+        <span>Wish List</span>
       </Link>
-      <span className="footer__text">Wish List</span>
-      <Link className="footer__icon" to="/camera">
+      <Link to="/camera">
         <img src={Camera} alt="Camera" />
+        <span>Scan</span>
       </Link>
-      <span className="footer__text">Scan</span>
     </Footer>
   );
 }
