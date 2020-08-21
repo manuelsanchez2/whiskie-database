@@ -3,6 +3,7 @@ import WhiskeyList from "../components/WhiskeyList";
 import FooterList from "../components/StyledFooter";
 import HeaderList from "../components/HeaderList";
 import StyledHeader from "../components/StyledHeader";
+import StyledFooter from "../components/StyledFooter";
 
 function Home(props) {
   const [query, setQuery] = React.useState("");
@@ -18,9 +19,7 @@ function Home(props) {
       <main className="app__borders">
         <WhiskeyList query={query} />
       </main>
-      <footer>
-        <FooterList />
-      </footer>
+      <StyledFooter />
     </div>
   );
 }

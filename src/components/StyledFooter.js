@@ -7,9 +7,9 @@ import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 
 const Footer = styled.footer`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  display: grid;
+  place-items: center;
+  border-radius: 0 20px 5px 5px;
   background: var(--bg-gradient);
 `;
 

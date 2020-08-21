@@ -1,18 +1,18 @@
 .app {
-  width: 100vw;
-  height: 100vh;
+  width: 80vw;
+  height: 100%;
   display: grid;
+  margin: 0 auto;
+  border-radius: 15px;
   grid-template-rows: auto 1fr auto;
+  border: solid 5px #fcff9e;
+}
+
+html {
+  background: #c67700;
 }
 
 main {
   background: rgba(255, 255, 255, 0.6);
   overflow: auto;
-}
-
-.app__borders {
-  border-style: solid;
-  border-image-slice: 1;
-  border-width: 5px 0;
-  border-image-source: var(--bg-borders);
 }
