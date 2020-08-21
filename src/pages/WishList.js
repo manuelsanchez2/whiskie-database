@@ -1,10 +1,21 @@
 import React from "react";
+import StyledHeader from "../components/StyledHeader";
+import StyledFooter from "../components/StyledFooter";
+import HeaderTitle from "../components/header/HeaderTitle";
+import HeaderImage from "../components/header/HeaderImage";
 
 function WishList(props) {
   return (
-    <div>
-      <h2>Here you have your wines</h2>
-    </div>
+    <>
+      <StyledHeader>
+        <HeaderTitle>STARRED WHISKIES</HeaderTitle>
+        <HeaderImage />
+      </StyledHeader>
+      <main>
+        <p>Here you have your whiskies</p>
+      </main>
+      <StyledFooter />
+    </>
   );
 }
 

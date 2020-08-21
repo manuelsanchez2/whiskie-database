@@ -1,26 +1,29 @@
 import React from "react";
 import WhiskeyList from "../components/WhiskeyList";
-import FooterList from "../components/FooterList";
-import HeaderList from "../components/HeaderList";
+import StyledHeader from "../components/StyledHeader";
+import StyledFooter from "../components/StyledFooter";
+import HeaderInput from "../components/header/HeaderInput";
+import HeaderTitle from "../components/header/HeaderTitle";
+import HeaderImage from "../components/header/HeaderImage";
 
 function Home(props) {
   const [query, setQuery] = React.useState("");
 
   return (
-    <div>
-      <header className="header">
-        <HeaderList
+    <>
+      <StyledHeader>
+        <HeaderTitle>WhiskeyManiacs</HeaderTitle>
+        <HeaderImage />
+        <HeaderInput
           whiskyQuery={query}
           onWhiskyQueryChange={(whiskyQuery) => setQuery(whiskyQuery)}
         />
-      </header>
-      <main className="app__borders">
+      </StyledHeader>
+      <main>
         <WhiskeyList query={query} />
       </main>
-      <footer>
-        <FooterList />
-      </footer>
-    </div>
+      <StyledFooter />
+    </>
   );
 }
 

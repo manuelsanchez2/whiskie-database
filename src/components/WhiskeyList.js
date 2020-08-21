@@ -1,13 +1,22 @@
 import React, { useState, useEffect } from "react";
-import List from "./List";
-import ListItems from "./ListItems";
-import ListItemImage from "./ListItemImage";
-import ListItemText from "./ListItemText";
+import WhiskeyListItems from "./list/WhiskeyListItems";
 import fetchWhiskeys from "../api/fetchWhiskeys";
-import LoadingScreen from "./LoadingScreen";
-import ExpandableInfo from "./ExpandableInfo";
+import LoadingScreen from "./list/LoadingScreen";
+import ExpandableInfo from "./list/ExpandableInfo";
 import "./WhiskeyList.css";
 import whiskeySrc from "../assets/whiskey.svg";
+import styled from "@emotion/styled";
+import WhiskeyListItemImage from "./list/WhiskeyListItemImage";
+import WhiskeyListItemText from "./list/WhiskeyListItemText";
+import WhiskeyListItemInfoButton from "./list/WhiskeyListItemInfoButton";
+import WhiskeyListItemFavButton from "./list/WhiskeyListItemFavButton";
+
+const List = styled.nav`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`;
 
 function WhiskeyList({ query }) {
   const [isLoading, setIsLoading] = useState(false);
@@ -18,10 +27,6 @@ function WhiskeyList({ query }) {
     setOpen(!open);
   };
 
-  // function waitFor(time) {
-  //   return new Promise((resolve) => setTimeout(resolve, time));
-  // }
-
   useEffect(() => {
     async function showWhiskeys() {
       const newWhiskeys = await fetchWhiskeys(query);
@@ -31,22 +36,25 @@ function WhiskeyList({ query }) {
     showWhiskeys();
   }, [query]);
 
-  if (isLoading || whiskeys === null) {
-    return <LoadingScreen />;
-  }
+  // if (isLoading || whiskeys === null) {
+  //   return <LoadingScreen />;
+  // }
 
   return (
     <List>
       {whiskeys?.map((whiskey) => (
-        <ListItems key={whiskey.id}>
-          <ListItemImage src={whiskeySrc} alt={`Picture of ${whiskey.title}`} />
-          <ListItemText
+        <WhiskeyListItems key={whiskey.id}>
+          <WhiskeyListItemImage
+            src={whiskeySrc}
+            alt={`Picture of ${whiskey.title}`}
+          />
+          <WhiskeyListItemText
             title={whiskey.title}
             description={whiskey.description}
           />
-          <button className="infoButton" onClick={showInfo}>
+          <WhiskeyListItemInfoButton onClick={showInfo}>
             More info
-          </button>
+          </WhiskeyListItemInfoButton>
           {open && (
             <ExpandableInfo
               title={whiskey.title}
@@ -55,7 +63,8 @@ function WhiskeyList({ query }) {
               region={whiskey.region}
             />
           )}
-        </ListItems>
+          <WhiskeyListItemFavButton>Add to favourite</WhiskeyListItemFavButton>
+        </WhiskeyListItems>
       ))}
     </List>
   );

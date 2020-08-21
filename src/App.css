@@ -1,22 +1,27 @@
-.app {
-  width: 100vw;
+#root {
   height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
 }
 
-header {
-  background: var(--bg-gradient);
+.app {
+  width: 80vw;
+  height: 100%;
+  display: grid;
+  margin: 0 auto;
+  border-radius: 15px;
+  grid-template-rows: auto 1fr auto;
+  border: solid 5px #fcff9e;
+}
+
+html {
+  background: #c67700;
 }
 
 main {
-  background: rgba(255, 255, 255, 0.6);
-  overflow: auto;
-}
-
-.app__borders {
-  border-style: solid;
-  border-image-slice: 1;
-  border-width: 5px 0;
-  border-image-source: var(--bg-borders);
+  background-image: linear-gradient(#fcff9e, #c67700),
+    url(assets/whiskeyBg2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: soft-light;
+  grid-row: 2 / 3;
+  overflow-y: scroll;
 }
