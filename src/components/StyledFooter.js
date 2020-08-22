@@ -1,7 +1,4 @@
 import React from "react";
-import Whiskey from "../assets/whiskey.svg";
-import WishList from "../assets/list.svg";
-import Camera from "../assets/camera.svg";
 import WhiskieSrc from "../assets/whiskie.png";
 import HomeSrc from "../assets/home.png";
 import CameraSrc from "../assets/foto.svg";
@@ -29,14 +26,16 @@ const Footer = styled.nav`
   }
 
   a span {
+    font-size: 0.9em;
     color: black;
     opacity: 0.7;
+    padding-top: 3px;
   }
 
   img {
-    width: 1.7em;
-    height: 1.7em;
-    opacity: 0.5;
+    width: 2em;
+    height: 2em;
+    opacity: 0.7;
   }
 
   a {
@@ -46,6 +45,7 @@ const Footer = styled.nav`
     justify-content: center;
     padding: 10px 0;
     text-decoration: none;
+    padding-bottom: 4px;
   }
 `;
 
@@ -54,7 +54,7 @@ function StyledFooter({ children, href, src, alt }) {
     <Footer>
       <Link to="/home">
         <img src={HomeSrc} alt="home" />
-        <span>The Tavern</span>
+        <span>Tavern</span>
       </Link>
       <Link to="/my-whiskies">
         <img src={WhiskieSrc} alt="my whiskies" />
