@@ -10,6 +10,7 @@ import WhiskeyListItems from "../components/list/WhiskeyListItems";
 import WhiskeyListItemImage from "../components/list/WhiskeyListItemImage";
 import whiskeySrc from "../assets/whiskey.svg";
 import StyledMain from "../components/StyledMain";
+import MainForm from "../components/MainForm";
 
 const fetchMyWhiskie = async () => {
   const response = await fetch("http://localhost:3333/whiskie");
@@ -33,6 +34,7 @@ function WishList(props) {
             <HeaderImage />
           </StyledHeader>
           <StyledMain>
+            <MainForm />
             {data.map((whiskie) => (
               <>
                 <WhiskeyListItems key={whiskie.title}>
