@@ -15,11 +15,12 @@ const ListItemText = styled.div`
   }
 `;
 
-function WhiskeyListItemText({ title, description }) {
+function WhiskeyListItemText({ title, description, region }) {
   return (
     <ListItemText>
       <h3>{title}</h3>
       <p>{description}</p>
+      <p>{region}</p>
     </ListItemText>
   );
 }

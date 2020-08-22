@@ -4,7 +4,11 @@ import StyledFooter from "../components/StyledFooter";
 import HeaderTitle from "../components/header/HeaderTitle";
 import HeaderImage from "../components/header/HeaderImage";
 import { useQuery } from "react-query";
-import WhiskeyListItemInfoButton from "../components/list/WhiskeyListItemInfoButton";
+import LoadingScreen from "../components/list/LoadingScreen";
+import WhiskeyListItemText from "../components/list/WhiskeyListItemText";
+import WhiskeyListItems from "../components/list/WhiskeyListItems";
+import WhiskeyListItemImage from "../components/list/WhiskeyListItemImage";
+import whiskeySrc from "../assets/whiskey.svg";
 
 const fetchMyWhiskie = async () => {
   const response = await fetch("http://localhost:3333/whiskie");
@@ -19,23 +23,34 @@ function WishList(props) {
 
   return (
     <>
-      <StyledHeader>
-        <HeaderTitle>STARRED WHISKIES</HeaderTitle>
-        <HeaderImage />
-      </StyledHeader>
-      <main>
-        {/* <p>{status}</p> */}
-        {status === "loading" && <div>Your whiskies are being loaded...</div>}
-        {status === "error" && <div>Error fetching data</div>}
-        {status === "success" && (
-          <div>
+      {status === "loading" && <LoadingScreen />}
+      {status === "error" && <div>Error fetching data</div>}
+      {status === "success" && (
+        <>
+          <StyledHeader>
+            <HeaderTitle>Your whiskies</HeaderTitle>
+            <HeaderImage />
+          </StyledHeader>
+          <main>
             {data.map((whiskie) => (
-              <div>{whiskie.title}</div>
+              <>
+                <WhiskeyListItems key={whiskie.title}>
+                  <WhiskeyListItemImage
+                    src={whiskeySrc}
+                    alt={`Picture of ${whiskie.title}`}
+                  />
+                  <WhiskeyListItemText
+                    title={whiskie.title}
+                    description={whiskie.description}
+                    region={whiskie.region}
+                  />
+                </WhiskeyListItems>
+              </>
             ))}
-          </div>
-        )}
-      </main>
-      <StyledFooter />
+          </main>
+          <StyledFooter />
+        </>
+      )}
     </>
   );
 }

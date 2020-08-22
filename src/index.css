@@ -20,11 +20,11 @@ html {
 
 body {
   margin: 0;
-  font-family: "Bebas Neue", cursive;
+  font-family: "Rubik", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: "Bebas Neue", cursive;
+  font-family: "Rubik", sans-serif;
 }
