@@ -50,11 +50,11 @@ function StyledFooter({ children, href, src, alt }) {
   return (
     <Footer>
       <Link to="/home">
-        <img src={Whiskey} alt="Your Whiskeys" />
+        <img src={Whiskey} alt="home" />
         <span>Whiskeys</span>
       </Link>
-      <Link to="/wish-list">
-        <img src={WishList} alt="Wish List" />
+      <Link to="/my-whiskies">
+        <img src={WishList} alt="my whiskies" />
         {/* <span className="footer__icon__badge">3</span> */}
         <span>Wish List</span>
       </Link>
