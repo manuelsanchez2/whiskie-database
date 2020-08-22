@@ -1,8 +1,28 @@
 {
-  "favourites": [
+  "whiskie": [
     {
       "title": "Whiskie1",
-      "description": "Incredible whiskie"
+      "description": "Incredible whiskie",
+      "id": 1,
+      "region": "Andalucia"
+    },
+    {
+      "title": "Whiskie2",
+      "description": "Incredible whiskie",
+      "id": 2,
+      "region": "Italy"
+    },
+    {
+      "title": "Whiskie3",
+      "description": "Incredible whiskie",
+      "id": 3,
+      "region": "Germany"
+    },
+    {
+      "title": "Whiskie4",
+      "description": "Incredible whiskie",
+      "id": 4,
+      "region": "Russia"
     }
   ]
 }

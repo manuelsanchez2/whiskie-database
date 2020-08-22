@@ -8,7 +8,7 @@ function Camera(props) {
   return (
     <>
       <StyledHeader>
-        <HeaderTitle>PICTURE YOUR WHISKIE</HeaderTitle>
+        <HeaderTitle>Tell me the Whiskie</HeaderTitle>
         <HeaderImage />
       </StyledHeader>
       <main>
