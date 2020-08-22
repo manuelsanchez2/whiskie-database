@@ -3,6 +3,7 @@ import StyledHeader from "../components/StyledHeader";
 import StyledFooter from "../components/StyledFooter";
 import HeaderTitle from "../components/header/HeaderTitle";
 import HeaderImage from "../components/header/HeaderImage";
+import StyledMain from "../components/StyledMain";
 
 function Camera(props) {
   return (
@@ -11,9 +12,9 @@ function Camera(props) {
         <HeaderTitle>Tell me the Whiskie</HeaderTitle>
         <HeaderImage />
       </StyledHeader>
-      <main>
+      <StyledMain>
         <p>Camera functions in progress...</p>
-      </main>
+      </StyledMain>
       <StyledFooter />
     </>
   );

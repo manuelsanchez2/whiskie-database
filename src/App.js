@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,10 +8,13 @@ import {
 import Home from "./pages/Home";
 import WishList from "./pages/WishList";
 import Camera from "./pages/Camera";
+import GlobalCSS from "./GlobalCSS";
+import PageContainer from "./components/PageContainer";
 
 function App() {
   return (
-    <div className="app">
+    <PageContainer>
+      <GlobalCSS />
       <Router>
         <Switch>
           <Route path="/home">
@@ -29,7 +31,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
-    </div>
+    </PageContainer>
   );
 }
 

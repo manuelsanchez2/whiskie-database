@@ -9,6 +9,7 @@ import WhiskeyListItemText from "../components/list/WhiskeyListItemText";
 import WhiskeyListItems from "../components/list/WhiskeyListItems";
 import WhiskeyListItemImage from "../components/list/WhiskeyListItemImage";
 import whiskeySrc from "../assets/whiskey.svg";
+import StyledMain from "../components/StyledMain";
 
 const fetchMyWhiskie = async () => {
   const response = await fetch("http://localhost:3333/whiskie");
@@ -31,7 +32,7 @@ function WishList(props) {
             <HeaderTitle>Your whiskies</HeaderTitle>
             <HeaderImage />
           </StyledHeader>
-          <main>
+          <StyledMain>
             {data.map((whiskie) => (
               <>
                 <WhiskeyListItems key={whiskie.title}>
@@ -47,7 +48,7 @@ function WishList(props) {
                 </WhiskeyListItems>
               </>
             ))}
-          </main>
+          </StyledMain>
           <StyledFooter />
         </>
       )}
