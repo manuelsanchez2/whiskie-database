@@ -10,7 +10,7 @@ const Footer = styled.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-radius: 0 20px 5px 5px;
+  border-radius: 3px;
   background: var(--bg-gradient);
 
   img:hover {

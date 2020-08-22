@@ -9,6 +9,7 @@ const Main = styled.main`
   background-blend-mode: soft-light;
   grid-row: 2 / 3;
   overflow-y: scroll;
+  border-radius: 7px;
 
   ::-webkit-scrollbar {
     width: 5px;
