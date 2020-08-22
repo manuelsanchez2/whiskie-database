@@ -9,6 +9,20 @@ const Main = styled.main`
   background-blend-mode: soft-light;
   grid-row: 2 / 3;
   overflow-y: scroll;
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #c67700;
+    height: 30px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: fcff9e;
+  }
 `;
 
 function StyledMain({ children }) {
