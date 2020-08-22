@@ -6,7 +6,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import Home from "./pages/Home";
-import WishList from "./pages/WishList";
+import MyWhiskies from "./pages/MyWhiskies";
 import Camera from "./pages/Camera";
 import GlobalCSS from "./GlobalCSS";
 import PageContainer from "./components/PageContainer";
@@ -20,8 +20,8 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
-          <Route path="/wish-list">
-            <WishList />
+          <Route path="/my-whiskies">
+            <MyWhiskies />
           </Route>
           <Route path="/camera">
             <Camera />
