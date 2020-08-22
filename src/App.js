@@ -9,10 +9,12 @@ import {
 import Home from "./pages/Home";
 import WishList from "./pages/WishList";
 import Camera from "./pages/Camera";
+import GlobalCSS from "./GlobalCSS";
 
 function App() {
   return (
     <div className="app">
+      <GlobalCSS />
       <Router>
         <Switch>
           <Route path="/home">
