@@ -5,6 +5,7 @@ import StyledFooter from "../components/StyledFooter";
 import HeaderInput from "../components/header/HeaderInput";
 import HeaderTitle from "../components/header/HeaderTitle";
 import HeaderImage from "../components/header/HeaderImage";
+import StyledMain from "../components/StyledMain";
 
 function Home(props) {
   const [query, setQuery] = React.useState("");
@@ -19,9 +20,9 @@ function Home(props) {
           onWhiskyQueryChange={(whiskyQuery) => setQuery(whiskyQuery)}
         />
       </StyledHeader>
-      <main>
+      <StyledMain>
         <WhiskeyList query={query} />
-      </main>
+      </StyledMain>
       <StyledFooter />
     </>
   );
