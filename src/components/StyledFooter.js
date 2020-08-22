@@ -2,7 +2,10 @@ import React from "react";
 import Whiskey from "../assets/whiskey.svg";
 import WishList from "../assets/list.svg";
 import Camera from "../assets/camera.svg";
-// import "./FooterList.css";
+import WhiskieSrc from "../assets/whiskie.png";
+import HomeSrc from "../assets/home.png";
+import CameraSrc from "../assets/foto.svg";
+
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 
@@ -50,16 +53,16 @@ function StyledFooter({ children, href, src, alt }) {
   return (
     <Footer>
       <Link to="/home">
-        <img src={Whiskey} alt="home" />
-        <span>Whiskeys</span>
+        <img src={HomeSrc} alt="home" />
+        <span>The Tavern</span>
       </Link>
       <Link to="/my-whiskies">
-        <img src={WishList} alt="my whiskies" />
+        <img src={WhiskieSrc} alt="my whiskies" />
         {/* <span className="footer__icon__badge">3</span> */}
-        <span>Wish List</span>
+        <span>Your Whiskies</span>
       </Link>
       <Link to="/camera">
-        <img src={Camera} alt="Camera" />
+        <img src={CameraSrc} alt="Camera" />
         <span>Scan</span>
       </Link>
     </Footer>
