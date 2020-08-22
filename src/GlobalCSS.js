@@ -11,11 +11,8 @@ const GlobalCSS = () => {
           box-sizing: border-box;
         }
 
-        html {
-          font-size: 12px;
-          box-sizing: border-box;
-        }
-        :root {
+        #root {
+          height: 100vh;
           --bg-gradient: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
           --bg-borders: radial-gradient(
             circle,
@@ -25,11 +22,27 @@ const GlobalCSS = () => {
           );
         }
 
+        html {
+          font-size: 12px;
+          box-sizing: border-box;
+          background: #c67700;
+        }
+
         body {
           margin: 0;
           font-family: "Rubik", sans-serif;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
+        }
+
+        main {
+          background-image: linear-gradient(#fcff9e, #c67700),
+            url(assets/whiskeyBg2.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-blend-mode: soft-light;
+          grid-row: 2 / 3;
+          overflow-y: scroll;
         }
 
         code {
