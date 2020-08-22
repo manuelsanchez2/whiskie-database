@@ -35,16 +35,6 @@ const GlobalCSS = () => {
           -moz-osx-font-smoothing: grayscale;
         }
 
-        main {
-          background-image: linear-gradient(#fcff9e, #c67700),
-            url(assets/whiskeyBg2.jpg);
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-blend-mode: soft-light;
-          grid-row: 2 / 3;
-          overflow-y: scroll;
-        }
-
         code {
           font-family: "Rubik", sans-serif;
         }
