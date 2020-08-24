@@ -30,7 +30,7 @@ function MainForm() {
         <span>Description:</span>
         <input type="text" name="description" />
       </label>
-      <input type="submit" value="Add whiskie" />
+      <input type="button" value="Add whiskie" />
     </Form>
   );
 }

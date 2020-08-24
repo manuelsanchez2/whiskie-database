@@ -37,9 +37,9 @@ function WhiskeyList({ query }) {
     showWhiskeys();
   }, [query]);
 
-  // if (isLoading || whiskeys === null) {
-  //   return <LoadingScreen />;
-  // }
+  if (isLoading || whiskeys === null) {
+    return <LoadingScreen />;
+  }
 
   return (
     <List>
