@@ -4,8 +4,13 @@ import StyledFooter from "../components/StyledFooter";
 import HeaderTitle from "../components/header/HeaderTitle";
 import HeaderImage from "../components/header/HeaderImage";
 import StyledMain from "../components/StyledMain";
+import Camera from "react-html5-camera-photo";
+import "react-html5-camera-photo/build/css/index.css";
 
-function Camera(props) {
+function Foto(props) {
+  function handleTakePhoto(dataUri) {
+    console.log("take picture");
+  }
   return (
     <>
       <StyledHeader>
@@ -14,10 +19,15 @@ function Camera(props) {
       </StyledHeader>
       <StyledMain>
         <p>Camera functions in progress...</p>
+        <Camera
+          onTakePhoto={(dataUri) => {
+            handleTakePhoto(dataUri);
+          }}
+        />
       </StyledMain>
       <StyledFooter />
     </>
   );
 }
 
-export default Camera;
+export default Foto;

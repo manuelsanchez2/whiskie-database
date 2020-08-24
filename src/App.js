@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import Home from "./pages/Home";
 import MyWhiskies from "./pages/MyWhiskies";
-import Camera from "./pages/Camera";
+import Foto from "./pages/Foto";
 import GlobalCSS from "./GlobalCSS";
 import PageContainer from "./components/PageContainer";
 
@@ -23,8 +23,8 @@ function App() {
           <Route path="/my-whiskies">
             <MyWhiskies />
           </Route>
-          <Route path="/camera">
-            <Camera />
+          <Route path="/foto">
+            <Foto />
           </Route>
           <Route path="/">
             <Redirect to="home" />
