@@ -61,7 +61,7 @@ function StyledFooter({ children, href, src, alt }) {
         {/* <span className="footer__icon__badge">3</span> */}
         <span>Your Whiskies</span>
       </Link>
-      <Link to="/camera">
+      <Link to="/foto">
         <img src={CameraSrc} alt="Camera" />
         <span>Scan</span>
       </Link>
